@@ -1,7 +1,7 @@
 {
-  "name": "ddiv",
+  "name": "diseno-digital-iv",
   "version": "1.0.0",
-  "description": "",
+  "description": "Diseño digital IV",
   "main": "index.html",
   "scripts": {
     "start": "parcel index.html --open",
@@ -10,6 +10,5 @@
   "devDependencies": {
     "@babel/core": "7.2.0",
     "parcel-bundler": "^1.6.1"
-  },
-  "keywords": []
+  }
 }
