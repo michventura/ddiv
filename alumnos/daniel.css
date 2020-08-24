@@ -1,0 +1,69 @@
+/* Tipografía */
+@import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;600&family=Source+Sans+Pro&display=swap");
+
+/****************************************
+*    Variables
+*****************************************/
+:root {
+  /* Colores */
+  --primario: #ffffff;
+  --secundario: #000000;
+  /* Tipografía */
+  --font-family-body: serif;
+  --font-family-headings: sans-serif;
+}
+
+/****************************************
+*    Base
+*****************************************/
+html {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-family-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font-family-headings);
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 33px;
+}
+
+h3 {
+  font-size: 27px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 19px;
+}
+
+/****************************************
+*    Temp
+*****************************************/
+/* TODO: Ejercicio aplicar estilos de figma a cajas */
+
+/****************************************
+*    Componentes
+*****************************************/
+
+/****************************************
+*    Helpers
+*****************************************/
+[dots] {
+  outline: rgba(255, 0, 0, 0.75) dotted 2px;
+}
