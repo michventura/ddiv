@@ -1,7 +1,7 @@
 {
-  "name": "diseno-digital-iv",
+  "name": "componentes",
   "version": "1.0.0",
-  "description": "Diseño digital IV",
+  "description": "Aplicación / demo de flujo de creación de componentes de Figma a código",
   "main": "index.html",
   "scripts": {
     "start": "parcel index.html --open",
