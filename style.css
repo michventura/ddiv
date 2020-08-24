@@ -72,6 +72,34 @@ h5 {
 *    Temp
 *****************************************/
 /* TODO: Ejercicio aplicar estilos de figma a cajas */
+.headings {
+  line-height: 2;
+  margin-bottom: 40px;
+}
+
+.parrafos {
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.buttons {
+  margin: 20px 0;
+}
+
+.boton {
+  padding: 7px 40px;
+  background: #6836e1;
+  color: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  width: 144px;
+  height: 40px;
+  transition: all 0.2s ease-in-out;
+}
+
+.boton:hover {
+  opacity: 0.9;
+}
 
 /****************************************
 *    Componentes
