@@ -1,0 +1,85 @@
+/* Tipografía */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito:wght@600&display=swap");
+
+/****************************************
+*    Variables
+*****************************************/
+:root {
+  /* Colores */
+  --primario: #6836e1;
+  --primario-light: #9b76eb;
+  --primario-dark: #3b22cb;
+  --secundario: #00e6ff;
+  --secundario-light: #6effff;
+  --secundario-dark: #00b2cc;
+  --text: #333333;
+  --text-light: #707070;
+  --text-dark: #141414;
+  --accent: #e16936;
+  --accent-light: #ed8255;
+  --accent-dark: #c55c2f;
+  /* Tipografía */
+  --font-family-body: "Montserrat", sans-serif;
+  --font-family-headings: "Nunito", sans-serif;
+}
+
+/****************************************
+*    Base
+*****************************************/
+html {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-family-body);
+  font-size: 16px;
+  letter-spacing: 0.06px;
+  color: var(--text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font-family-headings);
+  font-weight: 600;
+  letter-spacing: 0.01px;
+  color: var(--text-dark);
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 33px;
+}
+
+h3 {
+  font-size: 27px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 19px;
+}
+
+/****************************************
+*    Temp
+*****************************************/
+/* TODO: Ejercicio aplicar estilos de figma a cajas */
+
+/****************************************
+*    Componentes
+*****************************************/
+
+/****************************************
+*    Helpers
+*****************************************/
+[dots] {
+  outline: rgba(255, 0, 0, 0.75) dotted 2px;
+}

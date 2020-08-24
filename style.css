@@ -1,113 +1,46 @@
-/* Tipografía */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito:wght@600&display=swap");
-
-/****************************************
-*    Variables
-*****************************************/
+/* Variables Daniel */
 :root {
-  /* Colores */
-  --primario: #6836e1;
-  --primario-light: #9b76eb;
-  --primario-dark: #3b22cb;
-  --secundario: #00e6ff;
-  --secundario-light: #6effff;
-  --secundario-dark: #00b2cc;
-  --text: #333333;
-  --text-light: #707070;
-  --text-dark: #141414;
-  --accent: #e16936;
-  --accent-light: #ed8255;
-  --accent-dark: #c55c2f;
-  /* Tipografía */
-  --font-family-body: "Montserrat", sans-serif;
-  --font-family-headings: "Nunito", sans-serif;
+  --primario: #0d0d0d;
+  --secundario: #1b261a;
+  --secundario2: #a5aca5;
+  --secundario3: #c9cdc9;
+  --terciario: #b14a46;
+  --terciario2: #e5968b;
+  --terciario3: #f2cbc5;
+  --terciario4: #efdbda;
+  --cuaternario: #d5c3aa;
+  --cuaternario3: #fff6dc;
+  --blanco: #ffffff;
+  --font-family-headings: "Darker Grotesque", sans-serif;
+  --font-family-body: "Source Sans Pro", sans-serif;
 }
 
-/****************************************
-*    Base
-*****************************************/
-html {
-  height: 100%;
-}
-
+/* Base */
 body {
-  font-family: var(--font-family-body);
-  font-size: 16px;
-  letter-spacing: 0.06px;
-  color: var(--text);
+  /* TODO */
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-family: var(--font-family-headings);
-  font-weight: 600;
-  letter-spacing: 0.01px;
-  color: var(--text-dark);
-}
+/* Componentes */
 
-h1 {
-  font-size: 40px;
-}
-
-h2 {
-  font-size: 33px;
-}
-
-h3 {
-  font-size: 27px;
-}
-
-h4 {
-  font-size: 24px;
-}
-
-h5 {
-  font-size: 19px;
-}
-
-/****************************************
-*    Temp
-*****************************************/
-/* TODO: Ejercicio aplicar estilos de figma a cajas */
-.headings {
-  line-height: 2;
-  margin-bottom: 40px;
-}
-
-.parrafos {
-  line-height: 1.5;
-  color: var(--text);
-}
-
-.buttons {
-  margin: 20px 0;
-}
-
-.boton {
-  padding: 7px 40px;
-  background: #6836e1;
-  color: white;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 20px;
-  width: 144px;
-  height: 40px;
-  transition: all 0.2s ease-in-out;
-}
-
-.boton:hover {
-  opacity: 0.9;
-}
-
-/****************************************
-*    Componentes
-*****************************************/
-
-/****************************************
-*    Helpers
-*****************************************/
-[dots] {
-  outline: rgba(255, 0, 0, 0.75) dotted 2px;
-}
+/* Variables Elizabeth */
+/* :root {
+  --primario-1: #141414;
+  --primario-2: #333333;
+  --primario-3: #BFC0C0;
+  --primario-4:#F0F0EF;
+  --secundario-1: #3C0000;
+  --secundario-2:#774936;
+  --secundario-3:#D69F7E;
+  --secundario-4:#F5D0C5;
+  --brand-uno-1:#370617;
+  --brand-uno-2:#6A040F;
+  --brand-uno-3:#9D0208;
+  --brand-uno-4:#D00000;
+  --brand-dos-1:#1D3557;
+  --brand-dos-2:#457B9D;
+  --brand-dos-3:#77BBC8;
+  --brand-dos-4:#BCE9EB;
+  --brand-FOSFO-1:#00ff19;
+  --font-family-body: "GBook";
+  --font-family-headings: "BwBlack";
+}*/
