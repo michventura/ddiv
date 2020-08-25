@@ -1,46 +1,128 @@
-/* Variables Daniel */
+/* Tipografía */
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter.ttf") format("truetype");
+}
+
+/****************************************
+*    Variables
+*****************************************/
 :root {
-  --primario: #0d0d0d;
-  --secundario: #1b261a;
-  --secundario2: #a5aca5;
-  --secundario3: #c9cdc9;
-  --terciario: #b14a46;
-  --terciario2: #e5968b;
-  --terciario3: #f2cbc5;
-  --terciario4: #efdbda;
-  --cuaternario: #d5c3aa;
-  --cuaternario3: #fff6dc;
-  --blanco: #ffffff;
-  --font-family-headings: "Darker Grotesque", sans-serif;
-  --font-family-body: "Source Sans Pro", sans-serif;
+  /* Colores */
+  --primario: #6836e1;
+  --primario-light: #9b76eb;
+  --primario-dark: #3b22cb;
+  --secundario: #00e6ff;
+  --secundario-light: #6effff;
+  --secundario-dark: #00b2cc;
+  --text: #333333;
+  --text-light: #707070;
+  --text-dark: #141414;
+  --accent: #e16936;
+  --accent-light: #ed8255;
+  --accent-dark: #c55c2f;
+  --link-white: #f5f5f5;
+  --link-hover: #ffffff;
+  /* Tipografía */
+  --font-family: "Inter";
+  --h1: 40px;
+  --h2: 33px;
+  --h3: 27px;
+  --h4: 24px;
+  --h5: 19px;
 }
 
-/* Base */
+/****************************************
+*    Base
+*****************************************/
+html {
+  height: 100%;
+}
+
 body {
-  /* TODO */
+  font-family: var(--font-family);
+  font-size: 100%;
 }
 
-/* Componentes */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: var(--text-dark);
+}
 
-/* Variables Elizabeth */
-/* :root {
-  --primario-1: #141414;
-  --primario-2: #333333;
-  --primario-3: #BFC0C0;
-  --primario-4:#F0F0EF;
-  --secundario-1: #3C0000;
-  --secundario-2:#774936;
-  --secundario-3:#D69F7E;
-  --secundario-4:#F5D0C5;
-  --brand-uno-1:#370617;
-  --brand-uno-2:#6A040F;
-  --brand-uno-3:#9D0208;
-  --brand-uno-4:#D00000;
-  --brand-dos-1:#1D3557;
-  --brand-dos-2:#457B9D;
-  --brand-dos-3:#77BBC8;
-  --brand-dos-4:#BCE9EB;
-  --brand-FOSFO-1:#00ff19;
-  --font-family-body: "GBook";
-  --font-family-headings: "BwBlack";
-}*/
+h1 {
+  font-size: var(--h1);
+}
+
+h2 {
+  font-size: var(--h2);
+}
+
+h3 {
+  font-size: var(--h3);
+}
+
+h4 {
+  font-size: var(--h4);
+}
+
+h5 {
+  font-size: var(--h5);
+}
+
+/****************************************
+*    Componentes
+*****************************************/
+header {
+  display: flex;
+  align-items: center;
+  height: 11vh;
+  background: var(--primario);
+}
+
+header > * {
+  flex: 1 100%;
+  text-align: center;
+}
+
+header > *:first-child {
+  flex: 1 50%;
+}
+
+header img {
+  transition: all 0.4s ease-out;
+}
+
+header img:hover {
+  opacity: 0.8;
+}
+
+nav li {
+  display: inline;
+  padding: 0 1.5rem;
+}
+
+nav li:last-of-type {
+  font-variation-settings: "wght" 500, "slnt" -5;
+}
+
+nav a {
+  font-size: 17px;
+  text-decoration: none;
+  color: var(--link-white);
+  transition: all 0.4s ease-out;
+}
+
+nav a:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+/****************************************
+*    Helpers
+*****************************************/
+[dots] {
+  outline: rgba(255, 0, 0, 0.75) dotted 2px;
+}

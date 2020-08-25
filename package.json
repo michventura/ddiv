@@ -1,7 +1,7 @@
 {
-  "name": "componentes",
+  "name": "mich",
   "version": "1.0.0",
-  "description": "Aplicación / demo de flujo de creación de componentes de Figma a código",
+  "description": "",
   "main": "index.html",
   "scripts": {
     "start": "parcel index.html --open",
@@ -10,5 +10,6 @@
   "devDependencies": {
     "@babel/core": "7.2.0",
     "parcel-bundler": "^1.6.1"
-  }
+  },
+  "keywords": []
 }
