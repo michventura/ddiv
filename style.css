@@ -83,12 +83,12 @@ header {
 }
 
 header > * {
-  flex: 1 100%;
+  flex: 1 100%; /* Propiedad flex para que cada flex item mida lo mismo */
   text-align: center;
 }
 
 header > *:first-child {
-  flex: 1 50%;
+  flex: 1 50%; /* Explícitamente indicamos que el primer flex item mide 50% */
 }
 
 header img {
@@ -107,6 +107,13 @@ nav li {
 nav li:last-of-type {
   font-variation-settings: "wght" 500, "slnt" -5;
 }
+
+/* 
+la propiedad de font-variation-settings (dependiendo el typeface) los siguientes valores:
+ - wght: equivalente a font weight
+ - slnt: ángulo (similar a italic)
+ - opsz: tamaño (se puede utilizar font-size) 
+*/
 
 nav a {
   font-size: 17px;
