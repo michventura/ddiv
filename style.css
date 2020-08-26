@@ -88,7 +88,7 @@ h5 {
 }
 
 .header > *:first-child {
-  flex: 0.6; /* Explícitamente indicamos que el primer flex item mide 50% */
+  flex: 0.6; /* Explícitamente indicamos que el primer flex item mide 60% */
 }
 
 .header img {
