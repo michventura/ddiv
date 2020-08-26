@@ -75,36 +75,36 @@ h5 {
 /****************************************
 *    Componentes
 *****************************************/
-header {
+.header {
   display: flex;
   align-items: center;
   height: 11vh;
   background: var(--primario);
 }
 
-header > * {
+.header > * {
   flex: 1 100%; /* Propiedad flex para que cada flex item mida lo mismo */
   text-align: center;
 }
 
-header > *:first-child {
+.header > *:first-child {
   flex: 1 50%; /* Explícitamente indicamos que el primer flex item mide 50% */
 }
 
-header img {
+.header img {
   transition: all 0.4s ease-out;
 }
 
-header img:hover {
+.header img:hover {
   opacity: 0.8;
 }
 
-nav li {
+.menu li {
   display: inline;
   padding: 0 1.5rem;
 }
 
-nav li:last-of-type {
+.menu li:last-of-type {
   font-variation-settings: "wght" 500, "slnt" -5;
 }
 
@@ -115,14 +115,14 @@ la propiedad de font-variation-settings (dependiendo el typeface) los siguientes
  - opsz: tamaño (se puede utilizar font-size) 
 */
 
-nav a {
+.menu a {
   font-size: 17px;
   text-decoration: none;
   color: var(--link-white);
   transition: all 0.4s ease-out;
 }
 
-nav a:hover {
+.menu a:hover {
   color: var(--link-hover);
   text-decoration: underline;
 }
