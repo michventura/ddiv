@@ -83,15 +83,16 @@ h5 {
 }
 
 .header > * {
-  flex: 1 100%; /* Propiedad flex para que cada flex item mida lo mismo */
+  flex: 1; /* Propiedad flex para que cada flex item mida lo mismo */
   text-align: center;
 }
 
 .header > *:first-child {
-  flex: 1 50%; /* Explícitamente indicamos que el primer flex item mide 50% */
+  flex: 0.6; /* Explícitamente indicamos que el primer flex item mide 50% */
 }
 
 .header img {
+  margin: auto;
   transition: all 0.4s ease-out;
 }
 
