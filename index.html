@@ -7,8 +7,9 @@
     <title>Mich Ventura</title>
     <link rel="stylesheet" href="reset.min.css" />
     <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
   </head>
-  <body>
+  <body class="light">
     <header class="header" role="banner">
       <a href="/">
         <img src="./assets/images/logo.svg" alt="logo" />
@@ -27,12 +28,9 @@
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores ratione
         optio magnam incidunt sint sequi nisi saepe dolores quisquam sit.
       </p>
-      <div>
-        <!-- inline styles para testing TODO: quitar -->
-        <button style="margin-top: 5vh;">enviar</button>
-        <!-- inline styles & elemento para testing TODO: quitar -->
-        <span style="margin-right: 10vw;"></span>
-        <button class="disabled">Inhabilitado</button>
+      <div class="modos">
+        <button class="darkBtn" id="dark">Modo Dark</button>
+        <button class="lightBtn" id="light">Modo Light</button>
       </div>
     </main>
   </body>

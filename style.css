@@ -7,38 +7,39 @@
 :root {
   /* Colores */
   --primario: #6836e1;
-  --primario-claro: #9b76eb;
-  --primario-fuerte: #3b22cb;
+  --primarioClaro: #9b76eb;
+  --primarioFuerte: #3b22cb;
   --secundario: #00e6ff;
-  --secundario-claro: #6effff;
-  --secundario-fuerte: #00b2cc;
+  --secundarioClaro: #6effff;
+  --secundarioFuerte: #00b2cc;
   --negro: #333333;
-  --negro-claro: #707070;
-  --negro-fuerte: #141414;
+  --negroClaro: #707070;
+  --negroFuerte: #141414;
   --naranja: #e16936;
-  --naranja-claro: #ed8255;
-  --naranja-fuerte: #c55c2f;
-  --blanco-claro: #f5f5f5;
+  --naranjaClaro: #ed8255;
+  --naranjaFuerte: #c55c2f;
+  --blancoClaro: #f5f5f5;
   --blanco: #ffffff;
-  --outline: var(--primario) dotted 2px;
   /* Intención de los colores */
   --textosColor: var(--negro);
   --headingsColor: var(--negro-fuerte);
   --backgroundColor: var(--blanco);
   --backgroundColorHeader: var(--primario);
+  /* Estilos: elevacion, transiciones & utils */
+  --boxShadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+  --boxhsadowDisabled: 0 1px 1px rgba(0, 0, 0, 0.1);
+  --transition: all 0.4s ease-in-out;
+  --transition-modes: background 500ms ease-in-out, color 1000ms ease-in-out;
+  --dots: var(--primario) dotted 2px;
   /* Tipografía */
-  --font-family: "Inter";
+  --fontFamily: "Inter";
   font-size: 112.5%; /* Tipografía default de textos en 18px en lugar de 16px, 100% = 16px & 112.5% = 18px */
   --h1: 40px;
   --h2: 33px;
   --h3: 27px;
   --h4: 24px;
   --h5: 19px;
-  /* Elevaciones & transiciones */
-  --box-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
-  --box-shadow-disabled: 0 1px 1px rgba(0, 0, 0, 0.1);
-  --transition: all 0.4s ease-in-out;
-  /* Componentes */
+  /* Posición */
   --headerHeight: 11vh;
 }
 
@@ -46,14 +47,15 @@
 *    Base
 *****************************************/
 html {
-  font-family: var(--font-family);
+  font-family: var(--fontFamily);
   height: 100%;
 }
 
 body {
   font-family: inherit;
   color: var(--textosColor);
-  background-color: var(--backgroundColor);
+  background: var(--backgroundColor);
+  transition: var(--transition-modes);
 }
 
 h1,
@@ -94,33 +96,33 @@ a:hover {
 }
 
 button {
-  --buttonColor: var(--primario-fuerte);
+  --buttonColor: var(--primarioFuerte);
   appearance: none;
   color: var(--blanco);
   background-color: var(--buttonColor);
   border: none;
   border-radius: 15px;
   padding: 9px 24px;
-  box-shadow: var(--box-shadow);
+  box-shadow: var(--boxShadow);
   transition: var(--transition);
 }
 
 button:hover {
-  background-color: var(--primario-claro);
+  background-color: var(--primarioClaro);
   box-shadow: none;
   transform: translate(0, -1px);
   cursor: pointer;
 }
 
 button.disabled {
-  --buttonColor: var(--blanco-claro);
-  color: var(--negro-claro);
-  box-shadow: var(--box-shadow-disabled);
+  --buttonColor: var(--blancoClaro);
+  color: var(--negroClaro);
+  box-shadow: var(--boxShadowDisabled);
   transition: initial; /* reseteamos el  valor de transicion  en el boton disabled */
 }
 
 button.disabled:hover {
-  background-color: var(--blanco-claro);
+  background-color: var(--blancoClaro);
   transform: none;
   cursor: not-allowed;
 }
@@ -180,6 +182,8 @@ la propiedad de font-variation-settings (dependiendo el typeface) los siguientes
 }
 
 .main {
+  position: relative; /* TODO quitar */
+  height: calc(100vh - var(--headerHeight)); /* TODO quitar */
   width: 60ch;
   margin-left: auto;
   margin-right: auto;
@@ -194,9 +198,52 @@ la propiedad de font-variation-settings (dependiendo el typeface) los siguientes
   line-height: 1.7;
 }
 
+/* Temp */
+.modos {
+  position: absolute;
+  width: 50%;
+  transform: translate(50%);
+  bottom: 40px;
+}
+
+.darkBtn {
+  --buttonColor: var(--negroFuerte);
+  transform: translate(-50%);
+}
+
+.darkBtn:hover {
+  background: #0000008f;
+  transform: translate(-50%);
+}
+
+.lightBtn {
+  --buttonColor: var(--primarioClaro);
+  transform: translate(50%);
+}
+
+.lightBtn:hover {
+  background: #895bf5;
+  transform: translate(50%);
+}
+
+/* Temas */
+.light {
+  --textosColor: var(--negro);
+  --headingsColor: var(--negro-fuerte);
+  --backgroundColor: var(--blanco);
+  --backgroundColorHeader: var(--primario);
+}
+
+.dark {
+  --textosColor: var(--blanco);
+  --headingsColor: var(--blanco);
+  --backgroundColor: var(--negro);
+  --backgroundColorHeader: var(--primarioFuerte);
+}
+
 /****************************************
 *    Utilidades
 *****************************************/
 [outline] {
-  outline: var(--outline);
+  outline: var(--dots);
 }
