@@ -9,27 +9,31 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <body>
-      <header class="header" role="banner">
-        <a href="/">
-          <img src="./assets/images/logo.svg" alt="logo" />
-        </a>
-        <nav role="navigation">
-          <ul class="menu">
-            <li><a href="/">Blog</a></li>
-            <li><a href="/">Tips</a></li>
-            <li><a href="/">/uses</a></li>
-          </ul>
-        </nav>
-      </header>
-      <main class="main">
-        <h2>¿Quien soy yo?</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
-          ratione optio magnam incidunt sint sequi nisi saepe dolores quisquam
-          sit.
-        </p>
-      </main>
-    </body>
+    <header class="header" role="banner">
+      <a href="/">
+        <img src="./assets/images/logo.svg" alt="logo" />
+      </a>
+      <nav role="navigation">
+        <ul class="menu">
+          <li><a href="/">Blog</a></li>
+          <li><a href="/">Tips</a></li>
+          <li><a href="/">/uses</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <h2 class="main__title">¿Quien soy yo?</h2>
+      <p class="main__description">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores ratione
+        optio magnam incidunt sint sequi nisi saepe dolores quisquam sit.
+      </p>
+      <div>
+        <!-- inline styles para testing TODO: quitar -->
+        <button style="margin-top: 5vh;">enviar</button>
+        <!-- inline styles & elemento para testing TODO: quitar -->
+        <span style="margin-right: 10vw;"></span>
+        <button class="disabled">Inhabilitado</button>
+      </div>
+    </main>
   </body>
 </html>

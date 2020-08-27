@@ -1,10 +1,4 @@
 /* Tipografía */
-/*
-@font-face {
-  font-family: "Inter";
-  src: url("./assets/fonts/Inter.ttf") format("truetype");
-}
-*/
 @import url("https://rsms.me/inter/inter.css");
 
 /****************************************
@@ -13,26 +7,39 @@
 :root {
   /* Colores */
   --primario: #6836e1;
-  --primario-light: #9b76eb;
-  --primario-dark: #3b22cb;
+  --primario-claro: #9b76eb;
+  --primario-fuerte: #3b22cb;
   --secundario: #00e6ff;
-  --secundario-light: #6effff;
-  --secundario-dark: #00b2cc;
-  --text: #333333;
-  --text-light: #707070;
-  --text-dark: #141414;
-  --accent: #e16936;
-  --accent-light: #ed8255;
-  --accent-dark: #c55c2f;
-  --link-white: #f5f5f5;
-  --link-hover: #ffffff;
+  --secundario-claro: #6effff;
+  --secundario-fuerte: #00b2cc;
+  --negro: #333333;
+  --negro-claro: #707070;
+  --negro-fuerte: #141414;
+  --naranja: #e16936;
+  --naranja-claro: #ed8255;
+  --naranja-fuerte: #c55c2f;
+  --blanco-claro: #f5f5f5;
+  --blanco: #ffffff;
+  --outline: var(--primario) dotted 2px;
+  /* Intención de los colores */
+  --textosColor: var(--negro);
+  --headingsColor: var(--negro-fuerte);
+  --backgroundColor: var(--blanco);
+  --backgroundColorHeader: var(--primario);
   /* Tipografía */
-  --font-family: "Inter", sans-serif;
+  --font-family: "Inter";
+  font-size: 112.5%; /* Tipografía default de textos en 18px en lugar de 16px, 100% = 16px & 112.5% = 18px */
   --h1: 40px;
   --h2: 33px;
   --h3: 27px;
   --h4: 24px;
   --h5: 19px;
+  /* Elevaciones & transiciones */
+  --box-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+  --box-shadow-disabled: 0 1px 1px rgba(0, 0, 0, 0.1);
+  --transition: all 0.4s ease-in-out;
+  /* Componentes */
+  --headerHeight: 11vh;
 }
 
 /****************************************
@@ -45,8 +52,8 @@ html {
 
 body {
   font-family: inherit;
-  font-size: 100%;
-  color: var(--text);
+  color: var(--textosColor);
+  background-color: var(--backgroundColor);
 }
 
 h1,
@@ -54,7 +61,7 @@ h2,
 h3,
 h4,
 h5 {
-  color: var(--text-dark);
+  color: var(--headingsColor);
 }
 
 h1 {
@@ -77,14 +84,55 @@ h5 {
   font-size: var(--h5);
 }
 
+a {
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  --buttonColor: var(--primario-fuerte);
+  appearance: none;
+  color: var(--blanco);
+  background-color: var(--buttonColor);
+  border: none;
+  border-radius: 15px;
+  padding: 9px 24px;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+}
+
+button:hover {
+  background-color: var(--primario-claro);
+  box-shadow: none;
+  transform: translate(0, -1px);
+  cursor: pointer;
+}
+
+button.disabled {
+  --buttonColor: var(--blanco-claro);
+  color: var(--negro-claro);
+  box-shadow: var(--box-shadow-disabled);
+  transition: initial; /* reseteamos el  valor de transicion  en el boton disabled */
+}
+
+button.disabled:hover {
+  background-color: var(--blanco-claro);
+  transform: none;
+  cursor: not-allowed;
+}
+
 /****************************************
 *    Componentes
 *****************************************/
 .header {
   display: flex;
   align-items: center;
-  height: 11vh;
-  background: var(--primario);
+  height: var(--headerHeight);
+  background: var(--backgroundColorHeader);
 }
 
 .header > * {
@@ -98,7 +146,7 @@ h5 {
 
 .header img {
   margin: auto;
-  transition: all 0.4s ease-out;
+  transition: var(--transition);
 }
 
 .header img:hover {
@@ -115,38 +163,40 @@ h5 {
   font-style: italic;
 }
 
-/* 
+/*
 la propiedad de font-variation-settings (dependiendo el typeface) los siguientes valores:
  - wght: equivalente a font weight
  - slnt: ángulo (similar a italic)
- - opsz: tamaño (se puede utilizar font-size) 
+ - opsz: tamaño (se puede utilizar font-size)
 */
 
 .menu a {
   font-size: 17px;
-  text-decoration: none;
-  color: var(--link-white);
-  transition: all 0.4s ease-out;
+  color: var(--blanco);
 }
 
 .menu a:hover {
-  color: var(--link-hover);
-  text-decoration: underline;
+  color: var(--blanco);
 }
 
 .main {
-  margin: 0 auto;
-  width: 80vw;
+  width: 60ch;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.main h2 {
-  font-weight: 300;
-  margin: 20px 0 0;
+.main__title {
+  margin: 1ch 0;
+  font-weight: 400;
+}
+
+.main__description {
+  line-height: 1.7;
 }
 
 /****************************************
-*    Helpers
+*    Utilidades
 *****************************************/
-[dots] {
-  outline: rgba(255, 0, 0, 0.75) dotted 2px;
+[outline] {
+  outline: var(--outline);
 }
