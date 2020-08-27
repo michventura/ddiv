@@ -1,4 +1,9 @@
 /* Tipografía */
+@font-face {
+  font-family: "Amstelvar";
+  src: url("./assets/fonts/Amstelvar.ttf") format("truetype");
+}
+
 @import url("https://rsms.me/inter/inter.css");
 
 /****************************************
@@ -32,7 +37,8 @@
   --transition-modes: background 500ms ease-in-out, color 1000ms ease-in-out;
   --dots: var(--primario) dotted 2px;
   /* Tipografía */
-  --fontFamily: "Inter";
+  --headingFonts: "Inter";
+  --bodyFonts: "Inter";
   font-size: 112.5%; /* Tipografía default de textos en 18px en lugar de 16px, 100% = 16px & 112.5% = 18px */
   --h1: 40px;
   --h2: 33px;
@@ -47,12 +53,11 @@
 *    Base
 *****************************************/
 html {
-  font-family: var(--fontFamily);
   height: 100%;
 }
 
 body {
-  font-family: inherit;
+  font-family: var(--bodyFonts);
   color: var(--textosColor);
   background: var(--backgroundColor);
   transition: var(--transition-modes);
@@ -63,6 +68,7 @@ h2,
 h3,
 h4,
 h5 {
+  font-family: var(--headingFonts);
   color: var(--headingsColor);
 }
 
@@ -208,22 +214,22 @@ la propiedad de font-variation-settings (dependiendo el typeface) los siguientes
 
 .darkBtn {
   --buttonColor: var(--negroFuerte);
-  transform: translate(-50%);
+  transform: translate(50%);
 }
 
 .darkBtn:hover {
   background: #0000008f;
-  transform: translate(-50%);
+  transform: translate(50%);
 }
 
 .lightBtn {
   --buttonColor: var(--primarioClaro);
-  transform: translate(50%);
+  transform: translate(-50%);
 }
 
 .lightBtn:hover {
   background: #895bf5;
-  transform: translate(50%);
+  transform: translate(-50%);
 }
 
 /* Temas */
@@ -235,6 +241,8 @@ la propiedad de font-variation-settings (dependiendo el typeface) los siguientes
 }
 
 .dark {
+  --headingFonts: "Amstelvar";
+  --bodyFonts: "Amstelvar";
   --textosColor: var(--blanco);
   --headingsColor: var(--blanco);
   --backgroundColor: var(--negro);
